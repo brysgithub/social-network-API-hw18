@@ -37,7 +37,7 @@ module.exports = {
             res.json(newReaction);
     },
 
-    async deletedReaction(req, res) {
+    async deleteReaction(req, res) {
         let deletedReact = await Thought.findOneAndUpdate({ _id: req.params.thoughtId }, {
             $pull: {
                 reactions: {

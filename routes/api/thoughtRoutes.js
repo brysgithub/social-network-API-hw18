@@ -1,4 +1,4 @@
-const router = require('express').router();
+const router = require('express').Router();
 
 const { Thought } = require('../../models')
 const { User } = require('../../models')
@@ -10,7 +10,7 @@ const {
     deleteThought,
     addReaction,
     deleteReaction,
-} = require('../../controllers/friendController');
+} = require('../../controllers/thoughtController');
 
 router.post('/', async (req, res) => {
     try {
